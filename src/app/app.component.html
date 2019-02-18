@@ -56,6 +56,26 @@
                 <td> percent:'2.2-2' </td>
                 <td> {{a | percent:'2.2-2'}} </td>
             </tr>
+            <tr>
+                <td> {{salario}} </td>
+                <td> currency </td>
+                <td> {{salario | currency}} </td>
+            </tr>
+            <tr>
+                <td> {{salario}} </td>
+                <td> currency:'EUR' </td>
+                <td> {{salario | currency:'EUR'}} </td>
+            </tr>
+            <tr>
+                <td> {{salario}} </td>
+                <td> currency:'EUR':false </td>
+                <td> {{salario | currency:'EUR':false}} </td>
+            </tr>
+            <tr>
+                <td> {{salario}} </td>
+                <td> currency:'EUR':true:'4.0-0' </td>
+                <td> {{salario | currency:'EUR':true:'4.0-0'}} </td>
+            </tr>
         </tbody>
 
 
@@ -64,7 +84,11 @@
 
     <h4>Slice</h4>
     <ul>
-        <li *ngFor="let item of array">{{item}}</li>
+        <li *ngFor="let item of array | slice:5:20">{{item}}</li>
     </ul>
+    <h4>JSON</h4>
+    <pre>{{heroe | json}}</pre>
+
 
 </div>
+<br><br><br>
