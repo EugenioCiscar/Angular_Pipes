@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-nombre= "Eugenio"
+nombre= "Eugenio";
+nombre2="eugeNio cisCar fernAndez"
 array=[1,2,3,4,5,6,7,8,9,10]
 
 PI=Math.PI;
@@ -29,5 +30,7 @@ valorDePromesa = new Promise( (resolve, reject)=>{
 });
 
 fecha=new Date();
+
+video="aD6eQjwB-0o"
 
 }

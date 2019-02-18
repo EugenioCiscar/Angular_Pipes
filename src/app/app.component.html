@@ -96,6 +96,24 @@
                 <td> date:'MMMM - dd' </td>
                 <td> {{fecha | date:'MMMM - dd'}} </td>
             </tr>
+            <tr>
+                <td> {{fecha}} </td>
+                <td> date:'MMMM - dd' </td>
+                <td> {{fecha | date:'MMMM - dd'}} </td>
+            </tr>
+            <tr>
+                <td> {{nombre2}} </td>
+                <td> capitalizado </td>
+                <td> {{nombre2 | capitalizado:1:2:3:4:5 }} </td>
+            </tr>
+            <tr>
+                <td> {{nombre}} </td>
+                <td> contrasena:{{activar}}
+                    <br>
+                    <button (click)="activar=!activar" type="button" class="btn btn-outline-primary">Activar/desactivar</button>
+                </td>
+                <td> {{nombre | contrasenapipe:activar }} </td>
+            </tr>
         </tbody>
 
 
@@ -108,6 +126,10 @@
     </ul>
     <h4>JSON</h4>
     <pre>{{heroe | json}}</pre>
+
+    <h4>Youtube <small>video</small></h4>
+    <hr>
+    <iframe width="905" height="506" [src]="video|domseguro:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 </div>
